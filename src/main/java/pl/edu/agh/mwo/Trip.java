@@ -1,8 +1,12 @@
 package pl.edu.agh.mwo;
 
+import java.util.Collection;
+
 public class Trip {
 	private String name;
 	private String description;
+	
+	private Collection<Photo> photos;
 	
 	public Trip(String name, String description) {
 		this.name = name;
@@ -23,5 +27,13 @@ public class Trip {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public void addPhoto(Photo photo) {
+		photos.add(photo);
+	}
+	
+	public Collection<Photo> getPhotos(){
+		return photos;
 	}
 }
